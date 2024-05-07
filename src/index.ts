@@ -5,14 +5,12 @@ import { State } from "./entity/state.entity"
 const states_datas = require("../estados-cidades.json")
 
 export const dbConnection = new DataSource({
-  type: "[postgres, mysql..]",
+  type: "postgres",
   host: "localhost",
   port: 5432,
   username: "[user]",
   password: "[password]",
   database: "[database]",
-  "synchronize": true,
-  "logging": false,
   entities: [City, State],
 });
 
